@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .invalido {
+            border: 1px solid red;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="meuFormulario">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="telefone">Telefone:</label><br>
+        <input type="text" id="telefone" name="telefone" oninput="mascaraTelefone(this)" maxlength="15"><br>
+        <label for="cep">CEP:</label><br>
+        <input type="text" id="cep" name="cep" oninput="mascaraCep(this)" maxlength="9"><br>
+        <label for="cpf">CPF:</label><br>
+        <input type="text" id="cpf" name="cpf" oninput="mascaraCpf(this)" maxlength="14"><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
