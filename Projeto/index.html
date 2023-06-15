@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Empréstimo Consignado</h2>
+        <label for="aposentadoria">Valor do benefício:</label>
+        <input id="aposentadoria" type="text" oninput="formatarMoeda(this)">
+        <label for="seguro"> Adicionar Seguro Prestamista</label>
+        <input type="checkbox" id="seguro" name="seguro" title="Seguro Prestamista é uma cobertura que protege o tomador do empréstimo em caso de morte ou invalidez.">
+        <button onclick="calcular()">Calcular</button>
+        <div id="resultado"></div>
+        <div id="recalcularParcelas" style="display: none;">
+            <label for="numParcelas">Número de parcelas:</label>
+            <input id="numParcelas" type="number" min="0">
+            <button onclick="recalcularParcelas()">Recalcular Parcelas</button>
+            <div id="resultadoRecalculoParcelas"></div>
+        </div>
+        <div id="recalcularValor" style="display: none;">
+            <label for="valorParcela">Valor da parcela:</label>
+            <input id="valorParcela" type="text" oninput="formatarMoeda(this)">
+            <button onclick="recalcularValor()">Recalcular Valor</button>
+            <div id="resultadoRecalculoValor"></div>
+        </div>
+        <div id="error" style="color: red;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
