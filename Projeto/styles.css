@@ -6,7 +6,8 @@ body{
 img {
     max-width: 100%;
     height: auto;
-}
+  }
+  
 
 .container {
     background-image: url(/Projeto/assets/bobinaLot.jpg);
@@ -20,22 +21,8 @@ img {
     border-radius: 0.3125rem; /* 5px */
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 100%;
-        padding: 1.25rem;
-    }
-}
-
 h2 {
-    font-size: 1.5rem; /* Tamanho padrão para telas pequenas */
     text-align: center;
-}
-
-@media (min-width: 600px) {
-    h2 {
-        font-size: 2rem; /* Tamanho maior para telas maiores */
-    }
 }
 
 #resultado,
@@ -49,13 +36,13 @@ label {
     margin-bottom: 0.3125rem; /* 5px */
 }
 
-input {
+input:not([type=checkbox]) {
     width: 100%;
     padding: 0.625rem; /* 10px */
     margin-bottom: 0.625rem; /* 10px */
     box-sizing: border-box;
     border: 0.0125rem solid; /* 0.2px */
-    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0,0,0,0.5); /* 2px 2px 5px */
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0,0,0,0.5);/* 2px 2px 5px */
 }
 
 input#seguro {
