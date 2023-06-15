@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
     <div class="container">
         <h2>Calculadora de Empréstimo Consignado</h2>
-        <label for="aposentadoria">Valor do benefício:</label>
+        <label for="aposentadoria">Valor do Benefício:</label>
         <input id="aposentadoria" type="text" oninput="formatarMoeda(this)">
         <label for="seguro"> Adicionar Seguro Prestamista</label>
-        <input type="checkbox" id="seguro" name="seguro" title="Seguro Prestamista é uma cobertura que protege o tomador do empréstimo em caso de morte ou invalidez.">
+        <input type="checkbox" id="seguro" name="seguro"
+            title="Seguro Prestamista é uma cobertura que protege o tomador do empréstimo em caso de morte ou invalidez.">
         <button onclick="calcular()">Calcular</button>
         <div id="resultado"></div>
         <div id="recalcularParcelas" style="display: none;">
-            <label for="numParcelas">Número de parcelas:</label>
-            <input id="numParcelas" type="number" min="0">
+            <label for="numParcelas">Número de Parcelas:</label>
+            <input id="numParcelas" type="number" min="0" max="84" value="84">
             <button onclick="recalcularParcelas()">Recalcular Parcelas</button>
             <div id="resultadoRecalculoParcelas"></div>
         </div>
         <div id="recalcularValor" style="display: none;">
-            <label for="valorParcela">Valor da parcela:</label>
+            <label for="valorParcela">Valor da Parcela:</label>
             <input id="valorParcela" type="text" oninput="formatarMoeda(this)">
             <button onclick="recalcularValor()">Recalcular Valor</button>
             <div id="resultadoRecalculoValor"></div>
         </div>
         <div id="error" style="color: red;"></div>
         <img id="infoIcon" src="assets/299086_info_sign_icon.png" alt="Information Icon">
-    <div id="infoModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Empréstimos consignados são uma opção de crédito com taxas de juros geralmente mais baixas, 
-            voltados para aposentados e pensionistas. 
-            Nessa modalidade, as parcelas são descontadas diretamente do benefício do Instituto Nacional do Seguro Social (INSS). 
-            A margem consignável — ou seja, a parte da aposentadoria que pode ser comprometida pelo empréstimo — é de até 35%. 
-            A Caixa Econômica Federal permite um prazo de até 84 meses para o pagamento do empréstimo. 
-            É importante considerar sua capacidade de pagamento antes de contratar um empréstimo.</p>
-        <p>Seguro Prestamista é uma cobertura que protege o tomador do empréstimo em caso de morte ou invalidez.</p>
-        <p> Por favor, note que os resultados desta simulação são apenas estimativas.
-            O valor exato do seu empréstimo consignado pode variar com base em uma série de fatores, incluindo as taxas de juros atuais, seu histórico de crédito, entre outros.
-            Recomendamos que você entre em contato com a Caixa Econômica Federal para obter uma cotação precisa.</p>
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Informações</h3>
+                <p>Empréstimos consignados são uma opção de crédito com taxas de juros geralmente mais baixas, voltados para aposentados e pensionistas. Nessa modalidade, as parcelas são descontadas diretamente do benefício do Instituto Nacional do Seguro Social (INSS). A margem consignável — ou seja, a parte da aposentadoria que pode ser comprometida pelo empréstimo — é de até 35%. A Caixa Econômica Federal permite um prazo de até 84 meses para o pagamento do empréstimo. É importante considerar sua capacidade de pagamento antes de contratar um empréstimo.Acesse o <a href="https://www.caixa.gov.br/voce/credito-financiamento/emprestimo/consignado/Paginas/default.aspx">site oficial da Caixa </a>para mais informações.</p>
+                <p>Antes de fazer o empréstimo, é preciso fazer a pré-autorização no site <a href="https://meu.inss.gov.br/#/login"> meu.inss.gov</a>.</p>    
+                <p>O Seguro Prestamista é uma cobertura que protege o tomador do empréstimo em caso de morte ou invalidez. Consulte a <a href="https://www.caixavidaeprevidencia.com.br/seguroprestamista">Caixa Vida e Previdência </a>para mais informações.</p>
+                <p>Por favor, note que os resultados desta simulação são apenas estimativas. O valor exato do seu empréstimo consignado pode variar com base em uma série de fatores, incluindo as taxas de juros atuais, seu histórico de crédito, entre outros. Recomendamos que você entre em contato com a Caixa Econômica Federal ou Lotéricas para obter uma cotação precisa.</p>
+                <p>Este site foi desenvolvido exclusivamente para a disciplina de Desenvolvimento Web do curso de Análise e Desenvolvimento de Sistemas do IFSP.</p>
+            </div>
+        </div>
     </div>
-</div>
-
-    </div>
-    
-    
-
-
     <script src="script.js"></script>
 </body>
+
 </html>

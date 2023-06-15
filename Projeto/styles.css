@@ -8,13 +8,6 @@ body{
     height: 100%;
 }
 
-/* img {
-    max-width: 100%;
-    height: auto;
-
-  } */
-  
-
 .container {
     background-image: url(assets/bobinaLot.jpg);
     background-size: cover;
@@ -61,6 +54,7 @@ button {
     box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0,0,0,0.5); /* 2px 2px 5px */
     width: 100%;
     padding: 0.625rem; /* 10px */
+    margin-bottom: 0.625rem;
     background-color: rgb(84, 201, 237);
     color: white;
     border: none;
