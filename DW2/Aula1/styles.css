@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    position: relative;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;  /* Espaço entre o círculo e os textos abaixo */
+}
+
+#resultsRaio {
+    position: absolute;
+    top: 20px;    /* Espaço do topo da página */
+    right: 20px;  /* Espaço do lado direito da página */
+}
+
+#resultsPerimetro {
+    position: absolute;
+    top: 20px;    /* Espaço do topo da página */
+    left: 20px;   /* Espaço do lado esquerdo da página */
+}
